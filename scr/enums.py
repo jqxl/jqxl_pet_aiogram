@@ -2,9 +2,10 @@ from enum import Enum
 
 
 class Commands(str, Enum):
-    start = 'start'
+    START = 'start'
 
 
 class Callbacks(str, Enum):
-    yes = 'YES'
-    no = 'NO'
+    YES = 'YES'
+    NO = 'NO'
+    WEBAPP = 'WEBAPP'

@@ -1,4 +1,5 @@
 import captions
 
 # common router
-greet = "Привет, {name}!"
+greet = 'Привет, {name}!'
+you_press = 'Ты нажмал {callback}'

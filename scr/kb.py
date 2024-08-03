@@ -5,7 +5,7 @@ from aiogram.types import (
     ReplyKeyboardMarkup,
     ReplyKeyboardRemove,
 )
-from aiogram.utils.keyboard import InlineKeyboardBuilder
+from aiogram.types.web_app_info import WebAppInfo
 
 import captions
 from enums import Callbacks
@@ -27,8 +27,11 @@ ask_for_a_phone_number = ReplyKeyboardMarkup(
 yes_no_kb = InlineKeyboardMarkup(
     inline_keyboard=[
         [
-            InlineKeyboardButton(text=captions.yes, callback_data=Callbacks.yes),
-            InlineKeyboardButton(text=captions.no, callback_data=Callbacks.no),
+            InlineKeyboardButton(text=captions.run_webapp, web_app=WebAppInfo(url='https://github.com/jqxl/'))
+        ],
+        [
+            InlineKeyboardButton(text=captions.yes, callback_data=Callbacks.YES),
+            InlineKeyboardButton(text=captions.no, callback_data=Callbacks.NO),
         ]
     ]
 )
